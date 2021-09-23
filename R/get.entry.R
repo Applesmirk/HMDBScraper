@@ -17,7 +17,7 @@ get.entry<- function(id, prefix= "http://www.hmdb.ca/metabolites/",check_availab
 
 
   if(check_availability){
-    if(!hmdb.check.availability(id)){ stop(paste(id, " id could not be found"))}
+    if(!check.availability(id)){ stop(paste(id, " id could not be found"))}
   }
   #create link
   link<- paste(prefix,id,".xml",sep= "")
