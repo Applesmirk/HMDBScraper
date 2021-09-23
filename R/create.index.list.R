@@ -18,7 +18,7 @@ create.index.list<- function(path){
 
   hmdb_indices<-c("accession", "name", "cas_registry_number", "smiles", "inchi", "inchikey",
                   "chemspider_id", "chebi_id", "pubchem_compound_id",
-                  "metlin_id")
+                  "metlin_id", "kegg_id")
 
 
   hmdb_indices$canonical.smiles<-0
