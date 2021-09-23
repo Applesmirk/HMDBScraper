@@ -17,5 +17,7 @@ RoxygenNote: 7.1.2
 Depends: 
     R (>= 2.10)
 Imports: 
-    dplyr 
-    rvest 
+    dplyr (>= 1.0.7)
+    rvest (>=1.0.0)
+
+
