@@ -18,9 +18,10 @@ create.index.list<- function(path){
 
   hmdb_indices<-c("accession", "name", "cas_registry_number", "smiles", "inchi", "inchikey",
                   "chemspider_id", "chebi_id", "pubchem_compound_id",
-                  "metlin_id")
+                  "metlin_id", "kegg_id")
 
-
+  hmdb_indices<- hmdb_data[,hmdb_indices]
+ 
   hmdb_indices$canonical.smiles<-0
   for (i in 1:nrow(hmdb_indices)) {
     smi <- rcdk::parse.smiles(as.character(hmdb_indices$smiles[i]))[[1]]
