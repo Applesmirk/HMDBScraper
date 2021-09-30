@@ -31,12 +31,12 @@ get.entry<- function(id, prefix= "http://www.hmdb.ca/metabolites/",check_availab
 
   #error handling code, just try another 3 times
   i<-1
-  while(inherits(res, "try-error"))
+  while(inherits(txt, "try-error"))
   {
     txt<- try(readLines(link))
 
     i= i+1
-    if(i>3) break
+    if(i>3) stop("Could not find Server or ID")
   }
 
 
