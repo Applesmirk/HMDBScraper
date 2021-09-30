@@ -44,7 +44,7 @@ get.entry<- function(id, prefix= "http://www.hmdb.ca/metabolites/",check_availab
   #process data to be usable
   data<- XML::xmlTreeParse(txt,asText= T)
   data<- XML::xmlToList(data)
-
+  close(txt)
   return (data)
 }
 
