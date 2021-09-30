@@ -33,7 +33,7 @@ get.entry<- function(id, prefix= "http://www.hmdb.ca/metabolites/",check_availab
   i<-1
   while(inherits(txt, "try-error"))
   {
-    print(paste("Retrieving has failed for ",i,". time"))
+    print(paste("Retrieving has failed for ",i,". time",sep=""))
     txt<- try(readLines(link))
 
     i= i+1

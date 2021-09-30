@@ -19,8 +19,8 @@ check.availability<- function(id, hmdb_prefix = "http://www.hmdb.ca/metabolites/
   i<-1
   while(inherits(webpage, "try-error"))
   {
-    print(paste("Checking for availibility has failed  ",i,". time"))
-    webpage<- try(readLines(link))
+    print(paste("Checking for availibility has failed  ",i,". time",sep=""))
+    webpage<- try(rvest::read_html(link))
 
     i= i+1
     if(i>3) stop("Could not find Server or ID")
