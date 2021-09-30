@@ -1,7 +1,7 @@
 #'
 #' Get Entry
 #'
-#' This function downloads the XML Entry of a specififc HMDB ID.
+#' This function downloads the XML Entry of a specific HMDB ID.
 #'
 #'
 #'
@@ -22,8 +22,23 @@ get.entry<- function(id, prefix= "http://www.hmdb.ca/metabolites/",check_availab
   #create link
   link<- paste(prefix,id,".xml",sep= "")
 
+
+
+
+
   #download data
-  txt<- readLines(link)
+  txt<- try(readLines(link))
+
+  #error handling code, just try another 3 times
+  i<-1
+  while(inherits(res, "try-error"))
+  {
+    txt<- try(readLines(link))
+
+    i= i+1
+    if(i>3) break
+  }
+
 
   #process data to be usable
   data<- XML::xmlTreeParse(txt,asText= T)
