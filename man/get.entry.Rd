@@ -21,5 +21,5 @@ get.entry(
 A List of all available properties
 }
 \description{
-This function downloads the XML Entry of a specififc HMDB ID.
+This function downloads the XML Entry of a specific HMDB ID.
 }

@@ -4,20 +4,33 @@
 \alias{get.id}
 \title{Get ID}
 \usage{
-get.id(data, hmdb_indices, name_data, name_hmdb_indices, verbose = T)
+get.id(data, name_data, name_hmdb_indices, verbose = T)
 }
 \arguments{
-\item{data}{Data.frame with column HMDB where the indices are stored}
-
-\item{hmdb_indices}{Data.frame created by create.index.list}
+\item{data}{data.frame with column HMDB where the indices are stored}
 
 \item{name_data}{name of column from data by which should be matched}
 
-\item{name_hmdb_indices}{name of column from hmdb_indices by which should be matched}
+\item{name_hmdb_indices}{name of column from hmdb_indices by which should be matched Can be on of the following:
+\itemize{
+\item "name"
+\item "cas_registry_number"
+\item "smiles"
+\item "inchi"
+\item "inchikey"
+\item "chemspider_id"
+\item "chebi_id"
+\item "pubchem_compound_id"
+\item "metlin_id"
+\item "kegg_id"
+\item "canonical.smiles"
+}}
+
+\item{hmdb_indices}{Data.frame created by create.index.list}
 }
 \value{
 Data.frame data with added HMDB indices
 }
 \description{
-This function adds missing HMDB IDs depending on a given matching criteria.
+This function adds missing HMDB IDs to a data frame depending on a matching criteria given by the user.
 }
