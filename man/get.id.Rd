@@ -25,8 +25,6 @@ get.id(data, name_data, name_hmdb_indices, verbose = T)
 \item "kegg_id"
 \item "canonical.smiles"
 }}
-
-\item{hmdb_indices}{Data.frame created by create.index.list}
 }
 \value{
 Data.frame data with added HMDB indices

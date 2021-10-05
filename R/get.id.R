@@ -4,7 +4,6 @@
 #' This function adds missing HMDB IDs to a data frame depending on a matching criteria given by the user.
 #'
 #' @param data data.frame with column HMDB where the indices are stored
-#' @param hmdb_indices Data.frame created by create.index.list
 #' @param name_data name of column from data by which should be matched
 #' @param name_hmdb_indices name of column from hmdb_indices by which should be matched Can be on of the following:
 #' - "name"

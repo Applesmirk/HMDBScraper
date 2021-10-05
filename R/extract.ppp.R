@@ -1,7 +1,7 @@
 #' Extract Predicted Physical Properties PPP
 #'
 #' This function extracts Predicted Physical Properties from HMDB Entry
-#' @param entry HMDB Entry which can be gotten by get.entry
+#' @param entry HMDB Entry which can be gotten by \link[HMDBScraper]{get.entry}
 #' @return Predicted Physical Properties
 #' @export
 

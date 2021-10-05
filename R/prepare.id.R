@@ -5,7 +5,6 @@
 #' This allows the access to the right HMDB Hyperlink
 #'
 #'
-#'
 #' @param id Number or HMDB ID
 #' @return HMDB ID of length 7
 #' @export
