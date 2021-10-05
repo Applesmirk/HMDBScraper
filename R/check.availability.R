@@ -30,9 +30,5 @@ check.availability<- function(id, hmdb_prefix = "http://www.hmdb.ca/metabolites/
   available <- !grepl("has been revoked",webpage)
 
 
-
-
-
-
   return(available)
 }

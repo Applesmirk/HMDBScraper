@@ -22,10 +22,6 @@ get.entry<- function(id, prefix= "http://www.hmdb.ca/metabolites/",check_availab
   #create link
   link<- paste(prefix,id,".xml",sep= "")
 
-
-
-
-
   #download data
   txt<- try(readLines(link))
 
@@ -39,7 +35,6 @@ get.entry<- function(id, prefix= "http://www.hmdb.ca/metabolites/",check_availab
     i= i+1
     if(i>3) stop("Could not find Server or ID")
   }
-
 
   #process data to be usable
   data<- XML::xmlTreeParse(txt,asText= T)
